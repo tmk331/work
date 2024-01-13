@@ -8,6 +8,7 @@
 Visual Studio Codeを以下の拡張機能を追加する。
 1. Extension Pack For Java
 2. Gradle For Java
+3. Language Support for Java(TM) by Red Hat
 
 ## Javaプロジェクト作成手順
 
