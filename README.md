@@ -30,6 +30,10 @@ Visual Studio Codeを以下の拡張機能を追加する。
     - 必要に応じて名前を変更
 11. FizzBuzzについては、FizzBuzz.javaをApp.javaの同階層に作成して完了
 12. Webサーバについては、SpringBootWebServer.javaを同階層に作成
+13. importのエラーを解消するために、build.gradle.ktsの内容を書き換えて、外部ライブラリを実行可能な状態にする。
+    - 事前に拡張機能「Extension Pack For Java」をインストールしていれば、ファイルを保存した際に、
+    - 「A build file was modified. Do you want to synchronize the Java classpath/configuration?」というダイアログが表示されるので、YESボタンを押下。
+    - 表示されなければ、[Explorer」->「jAVA PROJECTS」->「Rebuild All」からでもエラー解消可能。
 
 
 
