@@ -39,11 +39,11 @@ Visual Studio Codeを以下の拡張機能を追加する。
 16. 「Run Java」を実行して、http://localhost:8080/square?number=5にアクセスできればOK
     - サンプルは二乗の値を返す
 
-※Webサーバの問題だけ進めるには、手順13~15の代わりに、手順16~18の設定のほうがよさそう。（MySQLではなく、H2DBを使用）
+※DBの設定をせずWebサーバの問題だけ進めるには、手順13-15の代わりに、手順17-19の設定のほうがよさそう。（MySQLではなく、H2DBを使用）
 
-16. 手順13のbuild.gradleを一部書き換え
+17. 手順13のbuild.gradleを一部書き換え
     - implementation("mysql:mysql-connector-java:8.0.26")の代わりに、implementation("com.h2database:h2")
-17. 手順14のapplication.propertiesを一部書き換え
+18. 手順14のapplication.propertiesを一部書き換え
 ```
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.driverClassName=org.h2.Driver
@@ -53,6 +53,6 @@ spring.datasource.password=password
 spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
 ```
-18. 手順15は不要。
+19. 手順15は不要。
 
 
