@@ -36,8 +36,12 @@ Visual Studio Codeを以下の拡張機能を追加する。
     - 表示されなければ、[Explorer」->「jAVA PROJECTS」->「Rebuild All」からでもエラー解消可能。
 14. application.propertiesを追加
 15. 事前にインストールしたMySQL WorkbenchからDBサーバを起動して、ddl-test.sqlに書かれたSQLを実行
-16. 「Run Java」を実行して、http://localhost:8080/square?number=5にアクセスできればOK
-    - サンプルは二乗の値を返す
+16. 「Run Java」を実行して、以下URLにアクセス。
+    - http://localhost:8080/square?number=5
+    - 作成したサンプルは二乗の値を返すプログラムとなっている。
+17. DBについては、DBServber.javaを同階層に作成して完了。
+    - 作成したサンプルはとりあえずSELECTが実行できるようにしただけ。
+    - 15の設定が完了していないとエラーになる。
 
 ※DBの設定をせずWebサーバの問題だけ進めるには、手順13-15の代わりに、手順17-19の設定のほうがよさそう。（MySQLではなく、H2DBを使用）
 
@@ -53,6 +57,6 @@ spring.datasource.password=password
 spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
 ```
-19. 手順15は不要。
+19. 手順15が不要になる。
 
 
