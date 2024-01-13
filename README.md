@@ -26,6 +26,7 @@ Visual Studio Codeを以下の拡張機能を追加する。
 8. 「File」->「Open Folder」から作成したフォルダを開く
 9. 自動作成されたApp.javaの右クリックから「Run Java」を指定して実行
     - Hello Worldが出力されるはず
+    - 必要に応じて名前を変更
 11. App.javaの同階層にFizzBuzz用のJavaファイルを作成して同様に実行していく
 
 
