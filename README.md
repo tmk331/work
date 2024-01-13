@@ -34,6 +34,23 @@ Visual Studio Codeを以下の拡張機能を追加する。
     - 事前に拡張機能「Extension Pack For Java」をインストールしていれば、ファイルを保存した際に、
     - 「A build file was modified. Do you want to synchronize the Java classpath/configuration?」というダイアログが表示されるので、YESボタンを押下。
     - 表示されなければ、[Explorer」->「jAVA PROJECTS」->「Rebuild All」からでもエラー解消可能。
+14. application.propertiesを追加
+15. 事前にインストールしたMySQL WorkbenchからDBサーバを起動して、ddl-test.sqlに書かれたファイルを実行
 
+※Webサーバの問題だけ進めるには、手順13~15の代わりに、手順16~18の設定のほうがよさそう。（MySQLではなく、H2DBを使用）
+
+16. 手順13のbuild.gradleは以下を使用
+    - implementation("mysql:mysql-connector-java:8.0.26")をimplementation("com.h2database:h2")に書き換え
+17. 手順14のapplication.propertiesの設定は以下を使用
+```
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
+
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+```
+18. 手順15は不要。
 
 
